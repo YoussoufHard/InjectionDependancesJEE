@@ -1,4 +1,6 @@
 package Dao;
 
-public class DaoImp {
+public class DaoImp implements IDao {
+    @Override
+    public double getData() {}
 }
