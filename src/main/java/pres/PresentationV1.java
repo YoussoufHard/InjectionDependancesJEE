@@ -1,7 +1,6 @@
 package pres;
 
-import Dao.DaoImp;
-import ext.DaoImpV2;
+import dao.DaoImp;
 import metier.MetierImp;
 
 public class PresentationV1 {
