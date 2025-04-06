@@ -1,11 +1,17 @@
 package metier;
 
 import dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("metier")    //equivalent dans xml bean id  class
 public class MetierImp implements IMetier {
 
     // Nb: ici on dit que MetierImp depend de IDao mais implements IMetier
     // couplage faible
+   // @Autowired   //ceci veux dire faire injection
+    // c'est recommendé de faire directement via constructeur au lieu de autowired
     public IDao dao ;
     @Override
     public double calcul() {
@@ -14,13 +20,14 @@ public class MetierImp implements IMetier {
     return res ;
     }
 
-    public MetierImp(IDao dao) {
+    // si on veux faire injection par constructeur via spring il faut y avoir un seul constructeur
+    public MetierImp(@Qualifier("dao2") IDao dao) {
         this.dao = dao;
     }
 
-    public MetierImp() {
-
-    }
+//    public MetierImp() {
+//
+//    }
 
     /**
      * Pour injecter dans la variable dao un objet
