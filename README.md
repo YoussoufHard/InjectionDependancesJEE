@@ -116,11 +116,12 @@ Cette seconde partie présente un mini framework d'injection basé sur :
 
 ---
 
-## 🙌 Réalisé par
+## Réalisé par
 
 **Auteur :** Youssouf  Tangara  
 **Encadré par :** Prof. Mohamed Youssfi  
 **Projet pédagogique :** Cours Java JEE – Injection de dépendances avec Spring Framework
+
 ---
 
 ## 📜 Licence
